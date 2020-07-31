@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jenkins-slave:
+    image: jenkinsci/jnlp-slave
+    container_name: jenkins-slave
+    environment:
+      JENKINS_URL: "http://jenkins.test.com"
+      JENKINS_AGENT_WORKDIR: "/home/jenkins/agent"
+      JENKINS_SECRET: "$JENKINS_SECRET"
+      JENKINS_AGENT_NAME: "$JENKINS_AGENT_NAME"
+      
